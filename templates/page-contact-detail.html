@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block body %}
+        <!-- Loader -->
+        <!-- <div id="preloader">
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Loader -->
+        
+        <!-- Hero Start -->
+        <section class="vh-100 d-flex align-items-center" style="background: url('{{ url_for('static', filename='images/contact-detail.jpg') }}') center center;">
+            <div class="bg-overlay bg-overlay-white"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 offset-lg-6 col-md-7 offset-md-5">
+                        <div class="title-heading mt-5 pt-4">
+                            <h1 class="heading">Let's talk about your portfolio</h1>
+                            <p class="text-muted para-desc mx-auto mb-0"><span class="text-primary fw-bold">RAS Suvi</span> provides modernized software products to global clients for their technological and industry-specific requirements.</p>
+                            
+                            <div class="d-flex contact-detail align-items-center mt-3">
+                                <div class="icon">
+                                    <i data-feather="mail" class="fea icon-m-md text-dark me-3"></i>
+                                </div>
+                                <div class="flex-1 content">
+                                    <h5 class="title fw-bold mb-0">Email</h5>
+                                    <a href="mailto:isaacnewtonrahul@gmail.com" class="text-primary">isaacnewtonrahul@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex contact-detail align-items-center mt-3">
+                                <div class="icon">
+                                    <i data-feather="phone" class="fea icon-m-md text-dark me-3"></i>
+                                </div>
+                                <div class="flex-1 content">
+                                    <h5 class="title fw-bold mb-0">Phone</h5>
+                                    <a href="tel:07506329256" class="text-primary">07506329256</a>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container--> 
+        </section><!--end section-->
+        <!-- Hero End -->
+
+        
+{% endblock body %}

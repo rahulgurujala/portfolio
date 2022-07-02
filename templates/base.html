@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock title %} </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+        <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
+        <meta name="author" content="Shreethemes" />
+        <meta name="email" content="shreethemes@gmail.com" />
+        <meta name="website" content="http://shreethemes.in" />
+        <meta name="Version" content="v3.0.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+        <!-- Bootstrap -->
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- tobii css -->
+        <link href="{{ url_for('static', filename='css/tobii.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="{{ url_for('static', filename='css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->               
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/tiny-slider.css') }}"/> 
+        <!-- Main Css -->
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="{{ url_for('static', filename='css/colors/default.css') }}" rel="stylesheet" id="color-opt">
+
+    </head>
+    <body>
+
+    
+    <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/logo-dark.png') }}" height="24" class="logo-light-mode" alt="">
+                    <img src="{{ url_for('static', filename='images/logo-light.png') }}" height="24" class="logo-dark-mode" alt="">
+                </a>
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+        
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu nav-right">
+                        <li><a href="{{ url_for('index') }}" class="sub-menu-item">Home</a></li>  
+                        <li><a href="{{ url_for('products') }}" class="sub-menu-item">Products</a></li>  
+                        <li><a href="{{ url_for('contact') }}" class="sub-menu-item">Contact Us</a></li>  
+                        <li><a href="{{ url_for('login') }}" class="sub-menu-item" style="pointer-events: none">Login</a></li>  
+                    </ul>
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+
+
+    {% block body %}
+    
+    
+    {% endblock body %}
+
+     <!-- javascript -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{ url_for('static', filename='js/gumshoe.polyfills.min.js')}}"></script>
+        <!-- shuffle js -->
+        <script src="{{ url_for('static', filename='js/shuffle.min.js')}}"></script>
+        <!-- SLIDER -->
+        <script src="{{ url_for('static', filename='js/tiny-slider.js')}} "></script>
+        <!-- tobii js -->
+        <script src="{{ url_for('static', filename='js/tobii.min.js')}} "></script>
+        <!-- Icons -->
+        <script src="{{ url_for('static', filename='js/feather.min.js')}}"></script>
+        <!-- Main Js -->
+        <script src="{{ url_for('static', filename='js/plugins.init.js')}}"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="{{ url_for('static', filename='js/app.js')}}"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
+</html>
